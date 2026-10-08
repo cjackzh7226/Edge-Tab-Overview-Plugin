@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "页览 · 标签页预览",
+  "version": "1.2.2",
+  "description": "三列卡片浏览当前窗口的标签页，搜索、切换和关闭；网页预览仅在本次浏览器会话内临时保留。",
+  "minimum_chrome_version": "127",
+  "permissions": ["tabs", "storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_title": "页览 · 当前窗口的标签页",
+    "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" }
+  },
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["activity.js"],
+    "run_at": "document_idle"
+  }],
+  "incognito": "not_allowed",
+  "web_accessible_resources": [{
+    "resources": ["popup.html", "popup.css", "popup.js", "icons/site.svg"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'self'; img-src 'self' data: https: http:; style-src 'self'"
+  }
+}

@@ -1,0 +1,15 @@
+# Browser profiles and local dependencies
+/tests/edge-profile*/
+node_modules/
+
+# Failed-run diagnostics and temporary validation files
+/tests/results/failure.json
+/.sync-validation/
+
+# Keep only the current extension package in version control
+/*.zip
+!/页览-Edge扩展-v1.2.2.zip
+
+# Local editor and OS files
+.DS_Store
+Thumbs.db

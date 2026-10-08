@@ -1,0 +1,11 @@
+{
+  "browser": "153.0.4234.32",
+  "nativePopupIdenticalAcrossDifferentWebBackgrounds": true,
+  "ordinaryPageOverlayAllowed": true,
+  "restrictedPage": {
+    "allowed": false,
+    "error": "Cannot access chrome:// and edge:// URLs"
+  },
+  "scope": "Isolated headless Edge and local fixture; real extension APIs, no installed-extension changes",
+  "experiment": "C:\\Users\\14913\\AppData\\Local\\Temp\\edge-glass-feasibility-7kRZg0"
+}

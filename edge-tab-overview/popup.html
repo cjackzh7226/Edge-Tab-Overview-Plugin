@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>页览 · 标签页预览</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+      <input id="search" type="search" placeholder="搜索选项卡" aria-label="按标题或网址搜索选项卡" autocomplete="off" spellcheck="false">
+      <kbd aria-hidden="true">Esc</kbd>
+    </div>
+    <div id="scroller" tabindex="-1">
+      <div id="cards" role="list" aria-label="当前窗口的标签页"></div>
+      <div id="empty" hidden><span class="empty-symbol">⌕</span><p>没有找到匹配的标签页</p><small>试试网页标题或网址</small></div>
+    </div>
+    <footer>
+      <span id="count" aria-live="polite">正在读取标签页…</span>
+      <button id="new-tab" title="新建标签页" aria-label="新建标签页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+    </footer>
+    <div id="error" role="status" hidden></div>
+  </main>
+  <template id="card-template">
+    <article class="card" role="listitem">
+      <button class="activate" type="button">
+        <span class="card-header"><img class="favicon" alt=""><span class="title"></span></span>
+        <span class="preview"><img class="thumbnail" alt="" hidden><span class="placeholder"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="4"/><path d="M4 12h24M9 9h1m3 0h1"/></svg><span>浏览后显示预览</span></span></span>
+      </button>
+      <button class="close" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button>
+    </article>
+  </template>
+</body>
+</html>
