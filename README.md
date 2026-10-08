@@ -27,7 +27,7 @@ Edge 内部页等无法注入浮层的页面会使用原生扩展菜单，宽度
 ## 交付
 
 - `edge-tab-overview/`：可以直接在 Edge 加载的扩展，也是完整源码。
-- [下载 v1.2.2 安装包](https://github.com/cjackzh7226/Edge-Tab-Overview/releases/tag/v1.2.2)：安装包仅在 GitHub Release 中发布。下载其中的 `页览-Edge扩展-v1.2.2.zip`，先解压，再加载其中的 `edge-tab-overview/` 文件夹。
+- [下载 v1.2.2 安装包](https://github.com/cjackzh7226/Edge-Tab-Overview-Plugin/releases/tag/v1.2.2)：安装包仅在 GitHub Release 中发布。下载其中的 `页览-Edge扩展-v1.2.2.zip`，先解压，再加载其中的 `edge-tab-overview/` 文件夹。
 - `tests/results/integration.json`：真实 Edge 自动化验证结果。
 - `tests/results/popup-light.png`、`popup-dark.png`：真正叠在网页上的浮层截图，周围能看到实际网页及圆角外的背景。
 - `tests/results/popup-fallback.png`：特殊页面使用的原生兼容菜单。
