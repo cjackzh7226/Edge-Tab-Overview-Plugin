@@ -1,13 +1,33 @@
 # 页览 · Edge 自用标签页扩展
 
-当前版本为 1.2.2，安装目录是本仓库下的 `edge-tab-overview/`。本次仅将菜单改为横向三列：普通浮层加宽到 1051 像素，兼容菜单在最大 800 像素宽度内显示三列。保留其他样式和交互。
+适用于桌面版 Microsoft Edge 的自用标签页预览扩展，当前版本为 1.2.2。点击工具栏图标，以三列卡片查看当前窗口的标签页，支持搜索、切换、关闭和新建。网页预览仅在本次浏览器会话中临时保留。
 
 请阅读 [中文安装与使用说明](edge-tab-overview/使用说明.md)。
+
+## 插件预览
+
+以下为 v1.2.2 在独立 Edge 测试环境中的真实截图，卡片内容来自本地测试网页。
+
+### 浅色模式
+
+普通网页上的浮层以三列展示标签页，支持网页缩略图、搜索和连续切换。
+
+![浅色模式：三列标签页预览浮层](tests/results/popup-light.png)
+
+### 深色模式
+
+![深色模式：三列标签页预览浮层](tests/results/popup-dark.png)
+
+### 特殊页面兼容菜单
+
+Edge 内部页等无法注入浮层的页面会使用原生扩展菜单，宽度最多为 800 像素。
+
+![特殊页面：原生兼容菜单](tests/results/popup-fallback.png)
 
 ## 交付
 
 - `edge-tab-overview/`：可以直接在 Edge 加载的扩展，也是完整源码。
-- `页览-Edge扩展-v1.2.2.zip`：最新版本，便于备份和转移。使用前先解压。此前版本的压缩包为旧版。
+- [页览-Edge扩展-v1.2.2.zip](页览-Edge扩展-v1.2.2.zip)：最新安装包，便于备份和转移。使用前先解压，再加载其中的 `edge-tab-overview/` 文件夹。
 - `tests/results/integration.json`：真实 Edge 自动化验证结果。
 - `tests/results/popup-light.png`、`popup-dark.png`：真正叠在网页上的浮层截图，周围能看到实际网页及圆角外的背景。
 - `tests/results/popup-fallback.png`：特殊页面使用的原生兼容菜单。
