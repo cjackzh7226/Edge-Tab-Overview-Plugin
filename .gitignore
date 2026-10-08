@@ -6,9 +6,8 @@ node_modules/
 /tests/results/failure.json
 /.sync-validation/
 
-# Keep only the current extension package in version control
+# Extension packages are distributed through GitHub Releases
 /*.zip
-!/页览-Edge扩展-v1.2.2.zip
 
 # Local editor and OS files
 .DS_Store
